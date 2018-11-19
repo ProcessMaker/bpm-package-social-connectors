@@ -1,0 +1,26 @@
+{
+    "name": "processmaker/bpm-package-social-connectors",
+    "description": "ProcessMaker BPM Connectors that provide Social Media connectivity",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Taylor Dondich",
+            "email": "taylor@processmaker.com"
+        }
+    ],
+    "require": {
+	    "processmaker/bpm": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProcessMaker\\Packages\\Connectors\\Social\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ProcessMaker\\Packages\\Connectors\\Social\\PluginServiceProvider"
+            ]
+        }
+    }
+}
