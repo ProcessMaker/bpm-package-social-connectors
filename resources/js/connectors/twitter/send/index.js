@@ -1,20 +1,10 @@
-import {
-  task,
-} from '@processmaker/modeler';
 
-  const component = {
-    extends: task.component,
-    methods: {
-      handleClick() {
-        this.$parent.loadInspector('processmaker-connectors-social-twitter-send', this.node.definition, this);
-      },
-    },
-  };
+import component from './component.vue';
 
-  const implementation = 'processmaker-social-twitter-send';
-  const nodeId = 'processmaker-connectors-social-twitter-send';
+const implementation = 'processmaker-social-twitter-send';
+const nodeId = 'processmaker-connectors-social-twitter-send';
 
-  const nodeType = {
+export default  {
     id: nodeId,
     component: component,
     bpmnType: 'bpmn:ServiceTask',
@@ -77,5 +67,3 @@ import {
       },
     ],
   };
-
-export default nodeType;

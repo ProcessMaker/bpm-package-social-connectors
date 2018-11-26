@@ -4,7 +4,7 @@
 </template>
 
 <script>
-//import connectIcon from '@/assets/connect-elements.svg';
+import connectIcon from '@processmaker/modeler/src/assets/toolpanel/task.svg';
 //import crownConfig from '@/mixins/crownConfig';
 
 import decoratedShape from '../../../shape.js'
