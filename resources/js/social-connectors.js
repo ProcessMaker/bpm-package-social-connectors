@@ -8,6 +8,6 @@ let nodeTypes = [
 
 ProcessMaker.EventBus.$on('modeler-init', function(modeler) {
     for(var node of nodeTypes) {
-        modeler.registerNode(node);
+        modeler.registerNode(node, () => node.id);
     }
 });
