@@ -2,9 +2,6 @@ import {
   task,
 } from '@processmaker/modeler';
 
-window.ProcessMaker.EventBus.$on('modeler-init', ({ registerNode }) => {
-  /* Add a custom node example */
-
   const component = {
     extends: task.component,
     methods: {
@@ -23,7 +20,7 @@ window.ProcessMaker.EventBus.$on('modeler-init', ({ registerNode }) => {
     bpmnType: 'bpmn:ServiceTask',
     control: true,
     category: 'Social',
-    icon: require('@/assets/toolpanel/task.svg'),
+    icon: require('@processmaker/modeler/src/assets/toolpanel/task.svg'),
     label: 'Send Tweet',
     definition: function (moddle) {
       return moddle.create('bpmn:ServiceTask', {
@@ -81,9 +78,4 @@ window.ProcessMaker.EventBus.$on('modeler-init', ({ registerNode }) => {
     ],
   };
 
-  registerNode(nodeType, definition => {
-    if (definition.implementation === implementation) {
-      return nodeId;
-    }
-  });
-});
+export default nodeType;
