@@ -1,6 +1,6 @@
 import {
   task,
-} from '@/components/nodes';
+} from '@processmaker/modeler';
 
 window.ProcessMaker.EventBus.$on('modeler-init', ({ registerNode }) => {
   /* Add a custom node example */
